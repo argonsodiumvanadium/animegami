@@ -1,0 +1,27 @@
+{
+  "name": "animegami",
+  "version": "0.0.1",
+  "description": "This website is an ad-free alternative that hosts all your favourite anime for you to watch It provides descriptions and scores of all titles, both courtsey of MyAnimeList , and efficiently categorizes them for ease of access. Credits: ArgonSodiumVanadium License: Apache 2.0",
+  "keywords": [
+    "anime","manga","music","free","ad-free","community","MyAnimeList"
+  ],
+  "private": true,
+  "license": "Apache 2.0",
+  "author": "arnav rustagi <arnrustagi@gmail.com> (https://github.com/argonsodiumvanadium)",
+  "scripts": {
+    "build": "parcel build index.html",
+    "dev": "parcel index.html --open",
+    "start": "npm run build && npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.0",
+    "bulma": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "typescript": "^3.9.7",
+    "vue": "^2.6.11"
+  }
+}

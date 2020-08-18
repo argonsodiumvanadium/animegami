@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+	<meta charset="utf-8">
+	<title>animegami</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:title" content="animegami">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="apple-touch-icon" href="icon.png">
+	<!-- Place favicon.ico in the root directory -->
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<!-- font awesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+	<!-- material -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+	<!-- animate.css -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
+	<!-- bulma -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+	<!-- vue js -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+	<meta name="theme-color" content="#222">
+</head>
+
+<body id="body">
+	<!-- Navigation bar -->
+	<nav id="navbar" class="navbar py-2 is-black is-fixed-top" role="navigation" aria-label="main navigation" style="background-color: rgba(36,36,36,0.9) !important;height: 6rem;backdrop-filter:blur(8px);">
+		<div class="navbar-brand ml-5">
+			<a class="navbar-item unhoverable" href="/index.html">
+				<span id="nav-heading" class="title has-text-light" style="font-family: 'Josefin Sans';display: inline-block !important;font-size: 1.5rem">ANIMEGAMI</span>
+			</a>
+
+			<!-- this manages the mobile menu -->
+			<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
+		</div>
+
+		<div class="navbar-menu">
+			<!--<div class="navbar-start">
+				<a onclick="render(this.textContent)" class="navbar-item asv-hoverable">
+					Anime
+				</a>
+
+				<a onclick="render(this.textContent)" class="navbar-item asv-hoverable">
+					Manga
+				</a>
+
+				<a onclick="render(this.textContent)" class="navbar-item asv-hoverable">
+					Music
+				</a>
+
+				<div class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link asv-hoverable">
+						More
+					</a>
+
+					<div class="navbar-dropdown">
+						<div onclick="render(this.textContent)" class="navbar-item asv-hoverable-dropdown">
+							About
+						</div>
+						<hr class="navbar-divider">
+						<div onclick="window.open('https://github.com/argonsodiumvanadium/animegami/issues')" class="navbar-item asv-hoverable-dropdown">
+							Report an issue
+						</div>
+					</div>
+				</div>
+			</div>-->
+
+			<!--<div class="navbar-end mr-6">
+				<div class="navbar-item">
+					<div class="columns" style="">
+						<div class="column"></div>
+						<div class="column is-6 has-icon-right">
+							<a class="button waves-effect is-warning is-fullwidth" style="transition: none;font-family: 'Roboto'">
+								<i class="material-icons">search</i><strong>SEARCH</strong>
+							</a>
+						</div>
+						<div class="column">
+							<a class="button waves-effect waves-light is-link is-fullwidth" style="transition: none;font-family: 'Roboto'">
+								<strong>DONATE</strong>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>-->
+
+		</div>
+	</nav>
+
+	<div class="columns is-gapless mb-0">
+		<div class="column is-2">
+			<div class="has-background-black has-text-light" style="height: 100vh;width: 17%;position: fixed;background-color: #242424 !important;padding-top: 6rem">
+				<ul class="collection" style="border-style: none;">
+					<li onclick="render(this.children[1].textContent)" id="anime-option" class="collection-item waves-effect waves-light columns" style="background-color: #242424;border-style:none;width:100%"><i class="material-icons column is-2">movie</i>
+						<div class="column">Anime</div>
+					</li>
+
+					<li onclick="render(this.children[1].textContent)" id="manga-option" class="collection-item waves-effect waves-light columns" style="background-color: #242424;border-style:none;width:100%"><i class="material-icons column is-2">book</i>
+						<div class="column">Manga</div>
+					</li>
+
+					<li onclick="render(this.children[1].textContent)" id="music-option" class="collection-item waves-effect waves-light columns" style="background-color: #242424;border-style:none;width:100%"><i class="material-icons column is-2">music_note</i>
+						<div class="column">Music</div>
+					</li>
+
+					<l1 class="collection navbar-divider" style="width:85%;margin: 2rem 10% 2rem 5%;"></l1>
+
+					<li onclick="render(this.children[1].textContent)" id="search-option" class="collection-item waves-effect waves-light columns" style="background-color: #242424;border-style:none;width:100%"><i class="material-icons column is-2">search</i>
+						<div class="column">Search</div>
+					</li>
+
+					<!--<li id="more-option" onclick="render(this.children[1].textContent)" class="collection-item waves-effect waves-light columns" style="background-color: #242424;border-style:none;width:100%"><i class="material-icons column is-2">more_vert</i>
+						<div class="column">More</div>
+					</li>-->
+				</ul>
+			</div>
+		</div>
+		<div id="content" class="column"></div>
+	</div>
+
+	<div style="position: fixed;right: 2rem;bottom: 2rem;z-index: 50">
+		<div id="next-page-btn" onclick="render($('next-page-name').textContent.toLowerCase())" class="button waves-effect columns" style="opacity: 0;border-radius: 3rem;padding: 1.5rem !important;box-shadow: 0px 3px 5px 5px rgba(20,20,20,0.2);backdrop-filter:blur(8px);background-color: rgba(255,255,255,0.6) !important;">
+			<div class="column">
+				<p class="subtitle">
+					<b id="next-page-name" class="has-text-black">ANIME</b>
+				</p>
+			</div>
+			<div class="column">
+				<i class="material-icons icon">
+					arrow_forward
+				</i>
+			</div>
+		</div>
+	</div>
+
+	<div style="position: fixed;left: calc(17% + 2rem);bottom: 2rem;z-index: 50">
+		<div id="prev-page-btn" class="button waves-effect columns" onclick="render($('prev-page-name').textContent.toLowerCase())" style="opacity: 0;backdrop-filter:blur(8px);background-color: rgba(255,255,255,0.6) !important;border-radius: 3rem;padding: 1.5rem !important;box-shadow: 0px 3px 5px 5px rgba(20,20,20,0.2);">
+			<div class="column">
+				<i class="material-icons icon">
+					arrow_back
+				</i>
+			</div>
+			<div class="column">
+				<p class="subtitle">
+					<b id="prev-page-name" class="has-text-black">ANIME</b>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<!--<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+	<script src="js/plugins.js"></script>-->
+	<script src="https://www.youtube.com/iframe_api"></script>
+	<script src="js/main.js"></script>
+	<script src="js/data_collector.js"></script>
+	<script src="js/DOM_updater.js"></script>
+
+	<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+	<!--<script>
+		window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+		ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+	</script>
+	<script src="https://www.google-analytics.com/analytics.js" async></script>-->
+</body>
+
+</html>

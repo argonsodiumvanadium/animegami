@@ -1,0 +1,20 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    <argonsodiumvanadium> -- <lead developer> -- <https://github.com/argonsodiumvanadium>
+
+# THANKS
+
+    <govind hari>
+    <sparsh arora>
+    <harsh aryan sinha>
+    <https://duckduckgo.com>
+    <https://stackoverflow.com>
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, 
+    Typescript, VueJS,
+    bulma, animate.css, Normalize.css

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+	<meta charset="utf-8">
+	<title>animegami</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:title" content="animegami">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="apple-touch-icon" href="icon.png">
+	<!-- Place favicon.ico in the root directory -->
+
+	<link rel="stylesheet" href="css/normalize.css">
+
+	<!-- font awesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+	<!-- material -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- animate.css -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
+	<!-- bulma -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+	<!-- vue js -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+	<meta name="theme-color" content="#222">
+
+	<style type="text/css">
+		.parallax{
+			position:static !important;
+		}
+
+		.tabs .indicator {
+			background-color: #fff !important;
+		}
+
+		a {
+			border-style: none !important; 
+		}
+
+		th {
+			color: #fff !important;
+		}
+		* {
+		  transition: all 100ms;
+		}
+
+		body {
+		  background-size: cover;
+		  background-attachment: fixed;
+		}
+
+		.hidden {
+			display: none;
+		}
+
+		.input-field input[type=number] {
+		  color: #ccc;
+		}
+		/* label color */
+		.input-field label {
+		 color: #ccc !important;
+		}
+		/* label focus color */
+		.input-field input[type=number]:focus + label {
+		 color: #00aaff!important;
+		}
+		/* label underline focus color */
+		.input-field input[type=number]:focus {
+		 color: #00aaff !important;
+		 border-bottom: 1px solid #00aaff!important;
+		 box-shadow: 0 1px 0 0 #00aaff!important;
+		}
+		/* icon prefix focus color */
+		.input-field .prefix.active {
+		 color: #00aaff!important;
+		}
+		   
+		.asv-disabled:hover {
+			cursor: not-allowed !important;
+		}
+
+	</style>
+</head>
+
+<body id="body" style="background-image:url('https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');background-size: cover; ">
+	<!-- Navigation bar -->
+	<nav id="navbar" class="navbar py-2 is-black is-fixed-top" role="navigation" aria-label="main navigation" style="background-color: rgba(36,36,36,0.9) !important;height: 6rem;backdrop-filter:blur(8px);">
+		<div class="navbar-brand ml-5">
+			<a class="navbar-item unhoverable" href="/index.html">
+				<span id="nav-heading" class="title has-text-light" style="font-family: 'Josefin Sans';display: inline-block !important;font-size: 1.5rem">ANIMEGAMI</span>
+			</a>
+
+			<!-- this manages the mobile menu -->
+			<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
+		</div>
+
+		<div class="navbar-menu">
+			<!--<div class="navbar-start">
+				<a onclick="render(this.textContent)" class="navbar-item asv-hoverable">
+					Anime
+				</a>
+
+				<a onclick="render(this.textContent)" class="navbar-item asv-hoverable">
+					Manga
+				</a>
+
+				<a onclick="render(this.textContent)" class="navbar-item asv-hoverable">
+					Music
+				</a>
+
+				<div class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link asv-hoverable">
+						More
+					</a>
+
+					<div class="navbar-dropdown">
+						<div onclick="render(this.textContent)" class="navbar-item asv-hoverable-dropdown">
+							About
+						</div>
+						<hr class="navbar-divider">
+						<div onclick="window.open('https://github.com/argonsodiumvanadium/animegami/issues')" class="navbar-item asv-hoverable-dropdown">
+							Report an issue
+						</div>
+					</div>
+				</div>
+			</div>-->
+
+			<!--<div class="navbar-end mr-6">
+				<div class="navbar-item">
+					<div class="columns" style="">
+						<div class="column"></div>
+						<div class="column is-6 has-icon-right">
+							<a class="button waves-effect is-warning is-fullwidth" style="transition: none;font-family: 'Roboto'">
+								<i class="material-icons">search</i><strong>SEARCH</strong>
+							</a>
+						</div>
+						<div class="column">
+							<a class="button waves-effect waves-light is-link is-fullwidth" style="transition: none;font-family: 'Roboto'">
+								<strong>DONATE</strong>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>-->
+
+		</div>
+	</nav>
+
+	<div class="columns is-gapless mb-0">
+		<div class="column is-1">
+			<div class="has-background-black has-text-light" style="height: 100vh;width: 8.3%;position: fixed;background-color: #242424 !important;padding-top: 6rem">
+				<ul class="collection" style="border-style: none;">
+					<li onclick="render(this.children[1].textContent)" id="anime-option" class="collection-item waves-effect waves-light columns" style="background-color: #242424;border-style:none;width:100%"><i class="material-icons column is-2" style="margin-left: 10%;">movie</i>
+						<div class="column hidden" style="opacity:0 !important">Anime</div>
+					</li>
+
+					<li onclick="render(this.children[1].textContent)" id="manga-option" class="collection-item waves-effect waves-light columns" style="background-color: #242424;border-style:none;width:100%"><i class="material-icons column is-2" style="margin-left: 10%;">book</i>
+						<div class="column hidden" style="opacity:0 !important">Manga</div>
+					</li>
+
+					<li onclick="render(this.children[1].textContent)" id="music-option" class="collection-item waves-effect waves-light columns" style="background-color: #242424;border-style:none;width:100%"><i class="material-icons column is-2" style="margin-left: 10%;">music_note</i>
+						<div class="column hidden" style="opacity:0 !important">Music</div>
+					</li>
+
+					<l1 class="collection navbar-divider" style="width:85%;margin: 2rem 10% 2rem 5%;"></l1>
+
+					<li onclick="render(this.children[1].textContent)" id="search-option" class="collection-item waves-effect waves-light columns" style="background-color: #242424;border-style:none;width:100%"><i class="material-icons column is-2" style="margin-left: 10%;">search</i>
+						<div class="column hidden" style="opacity:0 !important">Search</div>
+					</li>
+
+					<!--<li id="more-option" onclick="render(this.children[1].textContent)" class="collection-item waves-effect waves-light columns" style="background-color: #242424;border-style:none;width:100%"><i class="material-icons column is-2" style="margin-left: 10%;">more_vert</i>
+						<div class="column hidden" style="opacity:0 !important">More</div>
+					</li>-->
+				</ul>
+			</div>
+		</div>
+		<div id="content" class="column">
+			<section class="" style="background-color: transparent;height: 6rem"></section>
+			<div id="data-holder has-text-light" class="" style="width: 100%;background-color: rgba(0,0,0,0.6);backdrop-filter:blur(8px)">
+				<div class="columns has-text-centered pt-6">
+					<div class="column"></div>
+					<div class="column is-3">
+						<figure class="image is-3by4">
+							<img id="image-holder" alt="Placeholder image">
+						</figure>
+					</div>
+					<div class="column is-7 has-text-left">
+						<h1 id="anime-name" class="title has-text-light" style="font-family: 'Roboto';font-size: 2rem">
+							
+						</h1>
+						<br>
+						<p id="synopsis" class="subtitle has-text-light" style="font-size: 1rem;overflow: auto;">
+							
+						</p>
+					</div>
+					<div class="column"></div>
+
+				</div>
+				<div class="columns">
+					<div class="column is-1"></div>
+					<div class="column is-10">
+						<progress id="mal-score" class="progress mb-1" value="81" max="100"></progress><br>
+						<p id="mal-score-numeric" class="subtitle has-text-light has-text-centered"></p>
+					</div>
+				</div>
+				<div class="columns">
+					<div class="column is-1"></div>
+					<div class="column is-4">
+						<div class="card" style="backdrop-filter:blur(8px);background-color: rgba(255,255,255,0.1);">
+							<div class="card-content white-text">
+								<p id="additional-data">
+									
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="column is-6 has-text-light">
+						<ul id="tabs" class="tabs has-text-light" style="background-color: transparent !important;">
+					        <li class="tab col s3 active" id="info-tab"><a style="color: #fff !important;" href="#information">Information</a></li>
+					        <li class="tab col s3" id="anime-tab"><a style="color: #fff !important;" href="#anime">Anime</a></li>
+					        <li class="tab col s3" id="manga-tab"><a style="color: #fff !important;" href="#manga">Manga</a></li>
+				      </ul>
+				      <div id="information" style="overflow: auto !important;height: auto !important;">
+				      	<div class="card" style="backdrop-filter:blur(8px);background-color: rgba(255,255,255,0.1);height: auto !important;">
+							<div class="card-content white-text">
+								<h1 class="title has-text-light" style="font-family: 'Roboto';font-size: 3rem;border-bottom-style: solid;border-color: #fff"><b><strong>INFORMATION</strong></b></h1>
+								<div id="info-data">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				<div id="anime" style="height: auto !important">
+					<div class="card" style="backdrop-filter:blur(8px);background-color: rgba(255,255,255,0.1);height: auto !important;">
+						<div class="card-content white-text" style="height: auto !important">
+							<h1 class="title has-text-light" style="font-family: 'Roboto';font-size: 3rem;border-bottom-style: solid;border-color: #fff"><b><strong>ANIME</strong></b></h1>
+							<h1 style="font-size: 1.3rem;font-family: 'Work Sans'">No need to browse through a huge list, just type the episode number here and voila you get the episode you want to watch</h1>
+							<div class="input-field inline column is-5 mt-6 is-fullwidth" style="width: 100% !important">
+								<input id="anime-num" class="" style="font-size: 1.3rem;width: 100% !important" type="number">
+								<label for="anime-num">episode number</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="manga" style="height: auto !important">
+					<div class="card" style="backdrop-filter:blur(8px);background-color: rgba(255,255,255,0.1);height: auto !important;">
+						<div class="card-content white-text" style="height: auto !important">
+							<h1 class="title has-text-light" style="font-family: 'Roboto';font-size: 3rem;border-bottom-style: solid;border-color: #fff"><b><strong>MANGA </strong></b></h1>
+							<h1 style="font-size: 1.3rem;font-family: 'Work Sans'">No need to browse through a huge list, just type the chapter number here and voila you get the chapter you want to read</h1>
+							<div class="input-field inline column is-5 mt-6 is-fullwidth" style="width: 100% !important">
+								<input id="manga-num" class="" style="font-size: 1.3rem;width: 100% !important" type="number">
+								<label for="manga-num">chapter number</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+	<div class="hidden" id="gogo-ghost"></div>
+	<div class="hidden" id="misc-ghost"></div>
+
+	
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="js/watch.js"></script>
+	<script src="js/gogoloader.js"></script>
+
+</body>
+
+</html>	

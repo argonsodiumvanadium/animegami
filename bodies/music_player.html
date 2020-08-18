@@ -1,0 +1,31 @@
+<div  id="music_player" class="columns is-black py-4 px-4 is-mobile advanced-postioning has-text-white" 
+aria-label="main navigation" style="position: fixed;bottom: 0rem;width: 84%;right:0;z-index: 100;backdrop-filter:blur(8px);background-color: rgba(0,0,0,0.8)">
+	<div class="is-3 column" class="work-sans">
+		<h1 class="mb-0 heading">
+			Now playing
+		</h1>
+		<div id="music-np" class="work-sans">
+		</div>
+	</div>
+	<div class=" column cursor-pointer">
+		<div class="px-3 py-3" style="border-radius: 10rem;border-style: solid;border-color: #f14668;color: #f14668!important;text-align: center;">
+		<i onclick="jumpToTheSong(0)" class="fas fa-fast-backward fa mx-1 music_player_hover"></i>
+		<i onclick="playThePrevSong()" class="fas fa-step-backward fa ml-1 mr-5  music_player_hover"></i>
+		<i onclick="playOrPause()" id="play-pause" class="fas fa-pause fa-lg mx-2  music_player_hover"></i>
+		<i onclick="removeMusicPlayer()" id="stop" class="fas fa-stop-circle fa-lg mx-2  music_player_hover"></i>
+		<i onclick="playTheNextSong()" id="forward" class="fas fa-step-forward fa mr-1 ml-5  music_player_hover"></i>
+		<i onclick="jumpToTheSong(music_player.list.length - 1)" id="fast-forward"class="fas fa-fast-forward fa mx-1  music_player_hover"></i>
+		</div>
+	</div>
+	<div class="column is-4">
+		<div>
+			<h1 class="heading">
+				Up next
+			</h1>
+			<p id="music-up-next" class="work-sans">
+			</p>
+		</div>
+	</div>
+	<div id="youtube_vid_player" class="hidden">
+	</div>
+</div>
